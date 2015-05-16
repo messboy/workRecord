@@ -25,7 +25,7 @@ namespace WorkRecorder
         {
             switch (e.Node.Text)
             {
-                case "Google 日曆":
+                case "Google 日曆（網路）":
                     showScreen(new uc_GoogleCalendar());
                     break;
                 case "專案設定":

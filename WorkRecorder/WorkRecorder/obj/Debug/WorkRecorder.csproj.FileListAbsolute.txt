@@ -14,7 +14,6 @@ C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\bin\Debug\System.
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.csprojResolveAssemblyReference.cache
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.Form1.resources
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.Properties.Resources.resources
-C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.Setting.resources
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.Settings.resources
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.csproj.GenerateResource.Cache
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.exe.manifest

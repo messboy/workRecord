@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WorkRecorder.Model.ViewModel
 {
-    public class CalendarViewModel
+    public class CalendarListViewModel
     {
-        public CalendarViewModel()
+        public CalendarListViewModel()
         {
 
         }

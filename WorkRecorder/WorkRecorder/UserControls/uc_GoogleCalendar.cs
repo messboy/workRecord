@@ -15,6 +15,7 @@ using Google.Apis.Util.Store;
 using Google.Apis.Services;
 using Google.Apis.Calendar.v3.Data;
 using WorkRecorder.Model.ViewModel;
+using WorkRecorder.BAL;
 
 
 
@@ -23,24 +24,22 @@ namespace WorkRecorder
     public partial class uc_GoogleCalendar : UserControl
     {
         private IList<string> scopes = new List<string>();
-        private CalendarService service;
-        private List<CalendarViewModel> caList;
+        private GoogleCalendarService _googleCalendarService;
 
         public uc_GoogleCalendar()
         {
             InitializeComponent();
+            _googleCalendarService = new GoogleCalendarService();
 
             try
             {
-                //初始化
-                InitCanledarService();
-
                 //設定下拉選單
                 SetDDL(comboBox1);
 
-                //設定內容顯示
-                SetBizLogic(GetEvents());
 
+                //設定內容顯示
+                initGridView();
+                dataGridView1.DataSource = _googleCalendarService.GetEvents();
             }
             catch (Exception ex)
             {
@@ -51,80 +50,71 @@ namespace WorkRecorder
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string id = comboBox1.SelectedValue.ToString();
-            SetBizLogic(GetEvents(id));
-        }
-
-        private void InitCanledarService()
-        {
-            scopes.Add(CalendarService.Scope.Calendar);
-
-            UserCredential credential;
-
-            //oauth2
-            using (FileStream stream = new FileStream("client_secrets.json", FileMode.Open, FileAccess.Read))
-            {
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                   GoogleClientSecrets.Load(stream).Secrets, scopes, "user", CancellationToken.None,
-                   new FileDataStore("")).Result;
-            }
-
-            // Create Calendar Service.
-            service = new CalendarService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = "app",
-            });
-        }
-
-        private void SetBizLogic(Events events)
-        {
-            textBox1.Text = string.Empty;
-            if (events.Items.Count > 0)
-            {
-                foreach (var eventItem in events.Items)
-                {
-                    string when = eventItem.Start.DateTime.ToString();
-                    if (String.IsNullOrEmpty(when))
-                    {
-                        when = eventItem.Start.Date;
-                    }
-                    textBox1.Text += string.Format("{0} ({1}) \r\n", eventItem.Summary, when);
-                }
-            }
-            else
-            {
-                textBox1.Text += string.Format("No upcoming events found.");
-            }
-        }
-
-        private Events GetEvents(string CalendarID = "primary")
-        {
-            // Define parameters of request.
-            //Calendar ID 就是去網頁裡面找設定
-            EventsResource.ListRequest request = service.Events.List(CalendarID);
-            request.TimeMin = DateTime.Now;
-            request.ShowDeleted = false;
-            request.SingleEvents = true;
-            request.MaxResults = 30;
-            request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
-
-            return request.Execute();
-
+            dataGridView1.DataSource = _googleCalendarService.GetEvents(id);
         }
 
         private void SetDDL(ComboBox combobox)
         {
-            var list = service.CalendarList.List().Execute().Items.ToList();
-            caList = new List<CalendarViewModel>();
-            list.ForEach(m => caList.Add(new CalendarViewModel()
-            {
-                CalendarID = m.Id,
-                Summary = m.Summary
-            }));
-
-            combobox.DataSource = caList;
+            combobox.DataSource = _googleCalendarService.GetCalendarList();
             combobox.DisplayMember = "Summary";
             combobox.ValueMember = "CalendarID";
+        }
+
+        public void initGridView()
+        {
+
+            DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
+            col1.Name = "colField";
+            col1.Width = 100;
+            col1.HeaderText = "專案";
+            col1.DataPropertyName = "Project";
+            col1.ReadOnly = true;
+
+            DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
+            col4.Name = "colField";
+            col4.Width = 40;
+            col4.HeaderText = "角色";
+            col4.DataPropertyName = "Role";
+            col4.ReadOnly = true;
+
+            DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
+            col2.Name = "colField";
+            col2.Width = 130;
+            col2.HeaderText = "標題";
+            col2.DataPropertyName = "Title";
+            col2.ReadOnly = true;
+
+            DataGridViewTextBoxColumn col3 = new DataGridViewTextBoxColumn();
+            col3.Name = "colField";
+            col3.Width = 200;
+            col3.HeaderText = "內容";
+            col3.DataPropertyName = "Description";
+            col3.ReadOnly = true;
+
+            DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
+            col5.Name = "colField";
+            col5.Width = 100;
+            col5.HeaderText = "開始時間";
+            col5.DataPropertyName = "StartDate";
+            col5.ReadOnly = true;
+
+            DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
+            col6.Name = "colField";
+            col6.Width = 100;
+            col6.HeaderText = "結束時間";
+            col6.DataPropertyName = "EndDate";
+            col6.ReadOnly = true;
+
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { 
+                col1,
+                col4,
+                col2,
+                col3,
+                col5,
+                col6
+            });
+
+            dataGridView1.AutoGenerateColumns = false;
         }
     }
 }

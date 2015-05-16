@@ -38,14 +38,6 @@
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("設定", new System.Windows.Forms.TreeNode[] {
             treeNode4,
             treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Node13");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Node14");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Node15");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node2", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node3");
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -62,8 +54,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
-            this.splitContainer1.Size = new System.Drawing.Size(686, 475);
-            this.splitContainer1.SplitterDistance = 188;
+            this.splitContainer1.Size = new System.Drawing.Size(874, 474);
+            this.splitContainer1.SplitterDistance = 239;
             this.splitContainer1.TabIndex = 0;
             // 
             // treeView1
@@ -83,22 +75,10 @@
             treeNode5.Text = "專案設定";
             treeNode6.Name = "Node1";
             treeNode6.Text = "設定";
-            treeNode7.Name = "Node13";
-            treeNode7.Text = "Node13";
-            treeNode8.Name = "Node14";
-            treeNode8.Text = "Node14";
-            treeNode9.Name = "Node15";
-            treeNode9.Text = "Node15";
-            treeNode10.Name = "Node2";
-            treeNode10.Text = "Node2";
-            treeNode11.Name = "Node3";
-            treeNode11.Text = "Node3";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode3,
-            treeNode6,
-            treeNode10,
-            treeNode11});
-            this.treeView1.Size = new System.Drawing.Size(188, 475);
+            treeNode6});
+            this.treeView1.Size = new System.Drawing.Size(239, 474);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -106,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 475);
+            this.ClientSize = new System.Drawing.Size(874, 474);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Settings";
             this.Text = "Settings";

@@ -258,26 +258,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkRecorder.exe" size="165824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkRecorder.exe" size="161216">
       <assemblyIdentity name="WorkRecorder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UVMZMAt4ZbJjwTFibtJYQIAUFyb9syRjJ1gidY/JT0A=</dsig:DigestValue>
+        <dsig:DigestValue>rWxXie6L+stJg9s0oX1pD2tcbSF7lDU4D8kWT7+sO8A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkRecorder.BAL.dll" size="5120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkRecorder.BAL.dll" size="8704">
       <assemblyIdentity name="WorkRecorder.BAL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Z81eoPyjOLye+wit9Ilkxl9mx1QnIaqFvCXOAzWaAOQ=</dsig:DigestValue>
+        <dsig:DigestValue>w6nYiozjuPznnBsGNeV/jQ3wv6uvHbFS1sza76Jq1Y0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -289,19 +289,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/uHzdXmf34WlpFQpYJahgfLH3f3z5qI6u//FmQJXKoo=</dsig:DigestValue>
+        <dsig:DigestValue>YqWqC07gfruAXMYKXzG6P+ROOEoJ/w0YPQdwuYIvgp0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkRecorder.Model.dll" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WorkRecorder.Model.dll" size="8704">
       <assemblyIdentity name="WorkRecorder.Model" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0WpQ/86hkbYthdp/9/3BWIrcaF1lWN/qbKJjn8ACw7U=</dsig:DigestValue>
+        <dsig:DigestValue>ZQixPRBIvy1g6/cVrhCEV9lb8d7uBt1bXlNyzujxbQM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -317,13 +317,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="WorkRecorder.exe.config" size="2591">
+  <file name="WorkRecorder.exe.config" size="2691">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zT5dBrT51qE6XHBeW+x9plqxIwq88720CK8ZX1G8t+8=</dsig:DigestValue>
+      <dsig:DigestValue>QR+YiyNA11AdwdKlf687pKSfYvZ+ldaABGzGK8CsQM0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

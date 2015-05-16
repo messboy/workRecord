@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkRecorder.BAL;
 
+
 namespace WorkRecorder
 {
     public partial class Setting : Form

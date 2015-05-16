@@ -1,0 +1,16 @@
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\WorkRecorder.DAL.dll.config
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\WorkRecorder.DAL.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\WorkRecorder.DAL.pdb
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\EntityFramework.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\System.Data.SQLite.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\WorkRecorder.Model.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\WorkRecorder.Model.pdb
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\EntityFramework.xml
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\bin\Debug\System.Data.SQLite.xml
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\obj\Debug\WorkRecorder.DAL.csprojResolveAssemblyReference.cache
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\obj\Debug\WorkRecorder.DAL.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.DAL\obj\Debug\WorkRecorder.DAL.pdb

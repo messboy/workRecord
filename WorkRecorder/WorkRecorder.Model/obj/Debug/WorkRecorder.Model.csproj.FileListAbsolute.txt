@@ -1,0 +1,4 @@
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\bin\Debug\WorkRecorder.Model.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\bin\Debug\WorkRecorder.Model.pdb
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\obj\Debug\WorkRecorder.Model.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\obj\Debug\WorkRecorder.Model.pdb

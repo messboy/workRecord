@@ -8,7 +8,9 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using WorkRecorder.BAL;
-using WorkRecorder.DAL; 
+using WorkRecorder.Model.Domain;
+
+
 
 
 namespace WorkRecorder
@@ -25,6 +27,12 @@ namespace WorkRecorder
             setTimePicker();
 
             _db = new RecordService();
+
+            //建立SQLite DB檔案
+            if (!File.Exists(Application.StartupPath + @"\smallCRM.db"))
+            {
+                SQLiteConnection.CreateFile("smallCRM.db");
+            }
         }
 
         //縮到最小視窗
@@ -160,20 +168,6 @@ namespace WorkRecorder
             return true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                new SqlLiteHelper().CreateDb();
-                new SqlLiteHelper().TestSelectDb();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("發生未預期的錯誤，請洽安迪：" + ex.Message);
-            }
-        }
-
-
         private void roleSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -186,7 +180,7 @@ namespace WorkRecorder
 
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Setting f2 = new Setting();
+            Settings f2 = new Settings();
             f2.Show();
         }   
     }

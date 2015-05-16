@@ -50,10 +50,10 @@ namespace WorkRecorder
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roleSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roleSettingToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -223,14 +223,15 @@ namespace WorkRecorder
             this.roleSettingToolStripMenuItem,
             this.roleSettingToolStripMenuItem1});
             this.setToolStripMenuItem.Name = "setToolStripMenuItem";
-            this.setToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.setToolStripMenuItem.Text = "Set";
+            this.setToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.setToolStripMenuItem.Text = "Settings";
             // 
-            // helpToolStripMenuItem
+            // settingToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.settingToolStripMenuItem.Text = "Setting";
+            this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
             // roleSettingToolStripMenuItem
             // 
@@ -246,12 +247,11 @@ namespace WorkRecorder
             this.roleSettingToolStripMenuItem1.Text = "Role Setting";
             this.roleSettingToolStripMenuItem1.Click += new System.EventHandler(this.roleSettingToolStripMenuItem1_Click);
             // 
-            // settingToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.settingToolStripMenuItem.Text = "Setting";
-            this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.helpToolStripMenuItem.Text = "Help";
             // 
             // Form1
             // 

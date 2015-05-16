@@ -34,9 +34,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ProjectGridView = new System.Windows.Forms.DataGridView();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.ProjectGridView = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoleGridView)).BeginInit();
@@ -78,7 +78,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 19);
+            this.textBox1.Location = new System.Drawing.Point(24, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 1;
@@ -106,15 +106,6 @@
             this.tabPage2.Text = "專案設定";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // ProjectGridView
-            // 
-            this.ProjectGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProjectGridView.Location = new System.Drawing.Point(7, 62);
-            this.ProjectGridView.Name = "ProjectGridView";
-            this.ProjectGridView.RowTemplate.Height = 24;
-            this.ProjectGridView.Size = new System.Drawing.Size(630, 266);
-            this.ProjectGridView.TabIndex = 3;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(7, 22);
@@ -130,6 +121,15 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "新增專案";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // ProjectGridView
+            // 
+            this.ProjectGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProjectGridView.Location = new System.Drawing.Point(7, 62);
+            this.ProjectGridView.Name = "ProjectGridView";
+            this.ProjectGridView.RowTemplate.Height = 24;
+            this.ProjectGridView.Size = new System.Drawing.Size(630, 266);
+            this.ProjectGridView.TabIndex = 3;
             // 
             // Setting
             // 

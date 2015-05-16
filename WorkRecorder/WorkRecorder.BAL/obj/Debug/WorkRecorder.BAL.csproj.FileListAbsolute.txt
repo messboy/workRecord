@@ -1,0 +1,11 @@
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\obj\Debug\WorkRecorder.BAL.csprojResolveAssemblyReference.cache
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\WorkRecorder.BAL.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\WorkRecorder.BAL.pdb
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\WorkRecorder.DAL.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\WorkRecorder.Model.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\System.Data.SQLite.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\WorkRecorder.DAL.pdb
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\WorkRecorder.Model.pdb
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\bin\Debug\System.Data.SQLite.xml
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\obj\Debug\WorkRecorder.BAL.dll
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.BAL\obj\Debug\WorkRecorder.BAL.pdb

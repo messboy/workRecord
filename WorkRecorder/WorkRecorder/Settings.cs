@@ -34,6 +34,9 @@ namespace WorkRecorder
                 case "角色設定":
                     showScreen(new uc_SetRole());
                     break;
+                case "Log":
+                    showScreen(new uc_Log());
+                    break;
                 // etc...
             }
         }

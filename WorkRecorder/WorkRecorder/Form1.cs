@@ -18,6 +18,9 @@ namespace WorkRecorder
     public partial class Form1 : Form
     {
         private RecordService _db;
+        private RoleService _roleService;
+        private ProjectService _projectService;
+        private GoogleCalendarService _googleCalendarService;
 
         public Form1()
         {
@@ -27,12 +30,25 @@ namespace WorkRecorder
             setTimePicker();
 
             _db = new RecordService();
+            _roleService = new RoleService();
+            _projectService = new ProjectService();
+            _googleCalendarService = new GoogleCalendarService();
 
             //建立SQLite DB檔案
             if (!File.Exists(Application.StartupPath + @"\smallCRM.db"))
             {
                 SQLiteConnection.CreateFile("smallCRM.db");
+                new WorkRecorder.DAL.SqliteDao().CreateDb();
             }
+
+            //設定下拉選單
+            SetDDL(cbProj, _projectService.GetAll(), "Name", "ProjectID");
+            SetDDL(cbRole, _roleService.GetAll(), "RoleName", "RoleID");
+
+            //表擔位置
+            //System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width ;//'螢幕的寬 
+            //System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;//'螢幕的長 
+            this.Left = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width - this.Width; 
         }
 
         //縮到最小視窗
@@ -100,9 +116,10 @@ namespace WorkRecorder
                 #region set up model
                 RecordModel model = new RecordModel();
                 model.ID = Guid.NewGuid().ToString().ToLower();
-                model.UserName = txtUserName.Text;
-                model.Project = txtProjectName.Text;
-                model.Role = txtCharacter.Text;
+                //model.UserName = txtUserName.Text;
+                model.Project = cbProj.Text;
+                model.Role = cbRole.Text;
+                model.Title = txtTitle.Text;
                 model.Description = txtDescription.Text;
                 model.OpenTime = tpOpen.Value;
                 model.CloseTime = tpClose.Value;
@@ -112,6 +129,7 @@ namespace WorkRecorder
                 try
                 {
                     _db.Add(model);
+                    _googleCalendarService.Add(model);
                 }
                 catch (Exception ex)
                 {
@@ -129,28 +147,22 @@ namespace WorkRecorder
         private Boolean checkData() 
         {
             //檢查使用者名稱
-            if (string.IsNullOrEmpty(txtUserName.Text)) 
-            {
-                MessageBox.Show("你是誰？");
-                return false;
-            }
-            //檢查專案名稱
-            if (string.IsNullOrEmpty(txtProjectName.Text))
-            {
-                MessageBox.Show("哪個專案？");
-                return false; 
-            }
-            //檢查角色
-            if (string.IsNullOrEmpty(txtCharacter.Text))
-            {
-                MessageBox.Show("哪個角色？");
-                return false; 
-            }
+            //if (string.IsNullOrEmpty(txtUserName.Text)) 
+            //{
+            //    MessageBox.Show("你是誰？");
+            //    return false;
+            //}
             //檢查工作內容
-            if (string.IsNullOrEmpty(txtDescription.Text))
+            //if (string.IsNullOrEmpty(txtDescription.Text))
+            //{
+            //    MessageBox.Show("工作內容？");
+            //    return false; 
+            //}
+            //檢查標題
+            if (string.IsNullOrEmpty(txtTitle.Text))
             {
-                MessageBox.Show("工作內容？");
-                return false; 
+                MessageBox.Show("標題？");
+                return false;
             }
             //檢查結束時間 > 開始時間
             if (tpClose.Value < tpOpen.Value)
@@ -182,6 +194,13 @@ namespace WorkRecorder
         {
             Settings f2 = new Settings();
             f2.Show();
-        }   
+        }
+
+        private void SetDDL(ComboBox combobox, object DataSource, string DisplayMember, string ValueMember)
+        {
+            combobox.DataSource = DataSource;
+            combobox.DisplayMember = DisplayMember;
+            combobox.ValueMember = ValueMember;
+        }
     }
 }

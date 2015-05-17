@@ -30,9 +30,9 @@ namespace WorkRecorder.BAL
 
         }
 
-        public void GetAll()
+        public List<RecordModel> GetAll()
         {
-
+            return db.GetAll();
         }
 
         public void GetById(string id)

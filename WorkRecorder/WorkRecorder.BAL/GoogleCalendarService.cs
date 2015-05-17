@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using WorkRecorder.Model.Domain;
 using WorkRecorder.Model.ViewModel;
 
 namespace WorkRecorder.BAL
@@ -41,6 +42,47 @@ namespace WorkRecorder.BAL
                 HttpClientInitializer = credential,
                 ApplicationName = "app",
             });
+        }
+
+        public void Add(RecordModel model)
+        {
+            // Create and initialize a new event
+            var events = new Event()
+            {
+                Summary = string.Format("[{0}]|{1}|{2}", model.Project, model.Role, model.Title),
+                Start = new EventDateTime()
+                {
+                    //DateTimeRaw = "2014-12-24T10:00:00.000-07:00",
+                    DateTime = model.OpenTime,
+                },
+                End = new EventDateTime()
+                {
+                    //DateTimeRaw = "2014-12-24T11:00:00.000-08:00",
+                    DateTime = model.CloseTime,
+                }
+            };
+
+            try
+            {
+                // Insert the new event
+                var createdEvent = service.Events.Insert(events, "primary").Execute();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+           
+        }
+
+        public void Update()
+        {
+
+        }
+
+        public void Delete()
+        {
+
         }
 
         public List<CalendarListViewModel> GetCalendarList()
@@ -83,5 +125,6 @@ namespace WorkRecorder.BAL
             return CEList;
 
         }
+
     }
 }

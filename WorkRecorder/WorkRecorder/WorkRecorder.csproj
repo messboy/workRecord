@@ -156,6 +156,12 @@
     <Compile Include="UserControls\uc_GoogleCalendar.Designer.cs">
       <DependentUpon>uc_GoogleCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\uc_Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uc_Log.Designer.cs">
+      <DependentUpon>uc_Log.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uc_SetProject.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uc_GoogleCalendar.resx">
       <DependentUpon>uc_GoogleCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uc_Log.resx">
+      <DependentUpon>uc_Log.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uc_SetProject.resx">
       <DependentUpon>uc_SetProject.cs</DependentUpon>

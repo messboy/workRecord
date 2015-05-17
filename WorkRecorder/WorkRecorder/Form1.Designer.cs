@@ -35,8 +35,6 @@ namespace WorkRecorder
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.txtProjectName = new System.Windows.Forms.TextBox();
-            this.txtCharacter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,15 +43,15 @@ namespace WorkRecorder
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.roleSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.roleSettingToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbProj = new System.Windows.Forms.ComboBox();
+            this.cbRole = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,33 +74,17 @@ namespace WorkRecorder
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(26, 66);
+            this.label1.Location = new System.Drawing.Point(20, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "專案名稱";
             // 
-            // txtProjectName
-            // 
-            this.txtProjectName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtProjectName.Location = new System.Drawing.Point(92, 63);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(182, 25);
-            this.txtProjectName.TabIndex = 1;
-            // 
-            // txtCharacter
-            // 
-            this.txtCharacter.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCharacter.Location = new System.Drawing.Point(92, 88);
-            this.txtCharacter.Name = "txtCharacter";
-            this.txtCharacter.Size = new System.Drawing.Size(182, 25);
-            this.txtCharacter.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(26, 95);
+            this.label2.Location = new System.Drawing.Point(20, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 2;
@@ -111,18 +93,18 @@ namespace WorkRecorder
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtDescription.Location = new System.Drawing.Point(371, 42);
+            this.txtDescription.Location = new System.Drawing.Point(357, 66);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDescription.Size = new System.Drawing.Size(245, 73);
+            this.txtDescription.Size = new System.Drawing.Size(259, 47);
             this.txtDescription.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(305, 42);
+            this.label3.Location = new System.Drawing.Point(291, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 4;
@@ -179,25 +161,6 @@ namespace WorkRecorder
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // txtUserName
-            // 
-            this.txtUserName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtUserName.Location = new System.Drawing.Point(92, 38);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(182, 25);
-            this.txtUserName.TabIndex = 12;
-            this.txtUserName.Text = "Andy.Chen";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(26, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "我是…";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -219,9 +182,7 @@ namespace WorkRecorder
             // setToolStripMenuItem
             // 
             this.setToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingToolStripMenuItem,
-            this.roleSettingToolStripMenuItem,
-            this.roleSettingToolStripMenuItem1});
+            this.settingToolStripMenuItem});
             this.setToolStripMenuItem.Name = "setToolStripMenuItem";
             this.setToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.setToolStripMenuItem.Text = "Settings";
@@ -229,23 +190,9 @@ namespace WorkRecorder
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingToolStripMenuItem.Text = "Setting";
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
-            // 
-            // roleSettingToolStripMenuItem
-            // 
-            this.roleSettingToolStripMenuItem.Name = "roleSettingToolStripMenuItem";
-            this.roleSettingToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.roleSettingToolStripMenuItem.Text = "Project Setting";
-            this.roleSettingToolStripMenuItem.Click += new System.EventHandler(this.roleSettingToolStripMenuItem_Click);
-            // 
-            // roleSettingToolStripMenuItem1
-            // 
-            this.roleSettingToolStripMenuItem1.Name = "roleSettingToolStripMenuItem1";
-            this.roleSettingToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
-            this.roleSettingToolStripMenuItem1.Text = "Role Setting";
-            this.roleSettingToolStripMenuItem1.Click += new System.EventHandler(this.roleSettingToolStripMenuItem1_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -253,13 +200,49 @@ namespace WorkRecorder
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // cbProj
+            // 
+            this.cbProj.FormattingEnabled = true;
+            this.cbProj.Location = new System.Drawing.Point(86, 33);
+            this.cbProj.Name = "cbProj";
+            this.cbProj.Size = new System.Drawing.Size(182, 20);
+            this.cbProj.TabIndex = 14;
+            // 
+            // cbRole
+            // 
+            this.cbRole.FormattingEnabled = true;
+            this.cbRole.Location = new System.Drawing.Point(86, 64);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Size = new System.Drawing.Size(182, 20);
+            this.cbRole.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(291, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 17);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "標題";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtTitle.Location = new System.Drawing.Point(357, 33);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(259, 25);
+            this.txtTitle.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 141);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbRole);
+            this.Controls.Add(this.cbProj);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -267,16 +250,17 @@ namespace WorkRecorder
             this.Controls.Add(this.tpOpen);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCharacter);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtProjectName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(600, 900);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.Opacity = 0.85D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "WorkRecorder v1.0";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.menuStrip1.ResumeLayout(false);
@@ -293,8 +277,6 @@ namespace WorkRecorder
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Timer timer1;
         private Label label1;
-        private TextBox txtProjectName;
-        private TextBox txtCharacter;
         private Label label2;
         private TextBox txtDescription;
         private Label label3;
@@ -303,15 +285,15 @@ namespace WorkRecorder
         private Label label4;
         private Label label5;
         private Button btnSubmit;
-        private TextBox txtUserName;
-        private Label label6;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem setToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
-        private ToolStripMenuItem roleSettingToolStripMenuItem;
-        private ToolStripMenuItem roleSettingToolStripMenuItem1;
         private ToolStripMenuItem settingToolStripMenuItem;
+        private ComboBox cbProj;
+        private ComboBox cbRole;
+        private Label label7;
+        private TextBox txtTitle;
     }
 }
 

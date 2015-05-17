@@ -38,4 +38,3 @@ C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\bin\Debug\S
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\bin\Debug\Zlib.Portable.xml
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\obj\Debug\WorkRecorder.Model.csproj.App.config
-C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder.Model\obj\Debug\WorkRecorder.Model.csprojResolveAssemblyReference.cache

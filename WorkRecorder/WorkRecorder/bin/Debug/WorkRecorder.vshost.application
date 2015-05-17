@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="WorkRecorder.exe.manifest" size="18458">
+    <dependentAssembly dependencyType="install" codebase="WorkRecorder.exe.manifest" size="18459">
       <assemblyIdentity name="WorkRecorder.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2tdFvDZhSXxSAwkV1wxJCH2/GvIO4I5oSalKlwkAIV8=</dsig:DigestValue>
+        <dsig:DigestValue>X9rVWcDainqnH7dlVRMfvk2eqiAqC1eLkkxbuWA7GU8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

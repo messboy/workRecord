@@ -64,3 +64,4 @@ C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\bin\Debug\WorkRec
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.uc_GoogleCalendar.resources
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.UserControls.uc_SetProject.resources
 C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.UserControls.uc_SetRole.resources
+C:\Users\OI\Documents\git\workRecord\WorkRecorder\WorkRecorder\obj\Debug\WorkRecorder.UserControls.uc_Log.resources

@@ -79,28 +79,28 @@ namespace WorkRecorder
 
             DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
             col2.Name = "colField";
-            col2.Width = 130;
+            col2.Width = 150;
             col2.HeaderText = "標題";
             col2.DataPropertyName = "Title";
             col2.ReadOnly = true;
 
             DataGridViewTextBoxColumn col3 = new DataGridViewTextBoxColumn();
             col3.Name = "colField";
-            col3.Width = 200;
+            col3.Width = 230;
             col3.HeaderText = "內容";
             col3.DataPropertyName = "Description";
             col3.ReadOnly = true;
 
             DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
             col5.Name = "colField";
-            col5.Width = 100;
+            col5.Width = 130;
             col5.HeaderText = "開始時間";
             col5.DataPropertyName = "StartDate";
             col5.ReadOnly = true;
 
             DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
             col6.Name = "colField";
-            col6.Width = 100;
+            col6.Width = 130;
             col6.HeaderText = "結束時間";
             col6.DataPropertyName = "EndDate";
             col6.ReadOnly = true;

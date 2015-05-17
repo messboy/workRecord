@@ -18,6 +18,7 @@ namespace WorkRecorder.Model.ViewModel
             this.CalendarID = eventItem.ICalUID;
             this.ID = eventItem.Id;
             this.Project = GetProject(eventItem);
+            this.Role = GetRole(eventItem);
             this.Title = GetTitle(eventItem);
             this.Description = eventItem.Description;
             this.StartDate = GetStartDate(eventItem);
@@ -65,13 +66,26 @@ namespace WorkRecorder.Model.ViewModel
 
         private string GetTitle(Event eventItem)
         {
-            var index = eventItem.Summary.LastIndexOf("]");
+            var index = eventItem.Summary.LastIndexOf("|");
             if (index < 0)
             {
                 return eventItem.Summary;
             }
-            var title = eventItem.Summary.Substring(eventItem.Summary.LastIndexOf("]") + 1);
+            var title = eventItem.Summary.Substring(eventItem.Summary.LastIndexOf("|") + 1);
             return title;
+        }
+
+        private string GetRole(Event eventItem)
+        {
+            var backindex = eventItem.Summary.LastIndexOf("|");
+            var frontindex = eventItem.Summary.IndexOf("|");
+            var val = backindex - frontindex;
+            if (backindex < 0 && val == 0)
+            {
+                return string.Empty;
+            }
+            var Role = eventItem.Summary.Substring(eventItem.Summary.LastIndexOf("|") + 1, val - 1);
+            return Role;
         }
     }
 }
